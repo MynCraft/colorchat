@@ -1,12 +1,35 @@
 {
-  "name": "logchat",
+  "name": "@myncraftjs/colorchat",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Myncraftjs colorchat package",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/mjs/index.js",
+  "types": "./dist/typings/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo 'Build started'&&npx tsc&&npx tsc -p tsconfig.mjs.json&&echo 'Build finished'",
+    "test": "clear&&cd src &&ts-node ./src/test.ts",
+    "dev": "nodemon --watch ./src -e ts --exec 'npm run test' "
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MynCraft/colorchat.git"
+  },
+  "author": "SeneSatka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MynCraft/colorchat/issues"
+  },
+  "homepage": "https://github.com/MynCraft/colorchat#readme",
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "mineflayer": "^4.29.0",
+    "prismarine-chat": "^1.11.0",
+    "string-colorizer": "^1.0.5"
+  }
 }
