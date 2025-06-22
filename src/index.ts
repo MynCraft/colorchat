@@ -22,12 +22,12 @@ export default function colorChat(bot: Bot, opt: BotOptions) {
         else if (msg.length !== 0)
             bot.emit("chatColorized", msg, pos, jsonMsg);
     });
-    bot.on("chat", (username, message) => {
-        if (username === bot.username) return;
-        let colorizedMsg = colorizeExtra({
-            text: message
-        });
-        if (colorizedMsg.length !== 0)
-            bot.emit("chatColorized", colorizedMsg, "chat", ChatMessage.MessageBuilder.fromString(message));
-    });
+    // bot.on("chat", (username, message) => {
+    //     if (username === bot.username) return;
+    //     let colorizedMsg = colorizeExtra({
+    //         text: `${username}: ${message}`,
+    //     });
+    //     if (colorizedMsg.length !== 0)
+    //         bot.emit("chatColorized", colorizedMsg, "chat", ChatMessage.MessageBuilder.fromString(message));
+    // });
 }
