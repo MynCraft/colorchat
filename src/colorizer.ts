@@ -57,32 +57,32 @@ const colorizer = (color: string, text: string, bold: boolean) => {
         const hex = color.startsWith('#') ? color : colors[color];
         coloredText = chalk.hex(hex)(text);
 
-    } else {
-        coloredText = coloredText
-            .replaceAll("§0", "\x1b[0;30m")
-            .replaceAll("§1", "\x1b[0;34m")
-            .replaceAll("§2", "\x1b[0;32m")
-            .replaceAll("§3", "\x1b[0;36m")
-            .replaceAll("§4", "\x1b[0;31m")
-            .replaceAll("§5", "\x1b[0;35m")
-            .replaceAll("§6", "\x1b[0;33m")
-            .replaceAll("§7", "\x1b[0;37m")
-            .replaceAll("§8", "\x1b[0;90m")
-            .replaceAll("§9", "\x1b[0;94m")
-            .replaceAll("§a", "\x1b[0;92m")
-            .replaceAll("§b", "\x1b[0;96m")
-            .replaceAll("§c", "\x1b[0;91m")
-            .replaceAll("§d", "\x1b[0;95m")
-            .replaceAll("§e", "\x1b[0;93m")
-            .replaceAll("§f", "\x1b[0;97m")
-            .replaceAll("§k", "\x1b[8m")
-            .replaceAll("§l", "\x1b[1m")
-            .replaceAll("§m", "\x1b[9m")
-            .replaceAll("§n", "\x1b[4m")
-            .replaceAll("§o", "\x1b[3m")
-            .replaceAll("§r", "\x1b[0m");
-
     }
+    coloredText = coloredText
+        .replaceAll("§0", "\x1b[0;30m")
+        .replaceAll("§1", "\x1b[0;34m")
+        .replaceAll("§2", "\x1b[0;32m")
+        .replaceAll("§3", "\x1b[0;36m")
+        .replaceAll("§4", "\x1b[0;31m")
+        .replaceAll("§5", "\x1b[0;35m")
+        .replaceAll("§6", "\x1b[0;33m")
+        .replaceAll("§7", "\x1b[0;37m")
+        .replaceAll("§8", "\x1b[0;90m")
+        .replaceAll("§9", "\x1b[0;94m")
+        .replaceAll("§a", "\x1b[0;92m")
+        .replaceAll("§b", "\x1b[0;96m")
+        .replaceAll("§c", "\x1b[0;91m")
+        .replaceAll("§d", "\x1b[0;95m")
+        .replaceAll("§e", "\x1b[0;93m")
+        .replaceAll("§f", "\x1b[0;97m")
+        .replaceAll("§k", "\x1b[8m")
+        .replaceAll("§l", "\x1b[1m")
+        .replaceAll("§m", "\x1b[9m")
+        .replaceAll("§n", "\x1b[4m")
+        .replaceAll("§o", "\x1b[3m")
+        .replaceAll("§r", "\x1b[0m");
+
+
     return bold ? chalk.bold(coloredText) : coloredText;
 };
 export default colorizer;

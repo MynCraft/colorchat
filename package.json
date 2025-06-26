@@ -1,6 +1,6 @@
 {
   "name": "@myncraftjs/colorchat",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Myncraftjs colorchat package",
   "main": "./dist/cjs/index.js",
   "module": "./dist/mjs/index.js",
