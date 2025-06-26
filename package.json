@@ -1,6 +1,6 @@
 {
   "name": "@myncraftjs/colorchat",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Myncraftjs colorchat package",
   "main": "./dist/cjs/index.js",
   "module": "./dist/mjs/index.js",
@@ -10,6 +10,14 @@
     "test": "clear&&cd src &&ts-node ./src/test.ts",
     "dev": "nodemon --watch ./src -e ts --exec 'npm run test' "
   },
+  "keywords": [
+    "mineflayer",
+    "colorchat",
+    "minecraft",
+    "myncraft",
+    "mineflayer color chat",
+    "colorized chat"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MynCraft/colorchat.git"
