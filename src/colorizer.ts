@@ -52,12 +52,13 @@ export function colorizeExtra(extra: ExtraText): string {
     return colorizedMsg;
 }
 const colorizer = (color: string, text: string, bold: boolean) => {
+    let coloredText = "";
     if (color in colors || color.startsWith('#')) {
         const hex = color.startsWith('#') ? color : colors[color];
-        const coloredText = chalk.hex(hex)(text);
-        return bold ? chalk.bold(coloredText) : coloredText;
+        coloredText = chalk.hex(hex)(text);
+
     } else {
-        const txt = text
+        coloredText = coloredText
             .replaceAll("§0", "\x1b[0;30m")
             .replaceAll("§1", "\x1b[0;34m")
             .replaceAll("§2", "\x1b[0;32m")
@@ -81,7 +82,7 @@ const colorizer = (color: string, text: string, bold: boolean) => {
             .replaceAll("§o", "\x1b[3m")
             .replaceAll("§r", "\x1b[0m");
 
-        return bold ? chalk.bold(txt) : txt;
     }
+    return bold ? chalk.bold(coloredText) : coloredText;
 };
 export default colorizer;
